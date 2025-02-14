@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="description" content="NEURONUM empowers Businesses to Build, Deploy & Automate Economic Data Streams">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="max-image-preview: none">
+  <title>zirbelCODE: Augsburger Coding Space</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="icon" href="icon.png" type="image/png" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    
+@media only screen and (min-width: 1025px) {
+    .cardFooter {
+      grid-row: span 1 / auto;
+      grid-column: span 2 / auto;
+    }
+
+    .cardTop {
+      grid-row: span 5 / auto;
+      grid-column: span 2 / auto;
+    }
+
+
+    .cardContainer {
+      display: grid;
+      row-gap: 20px;
+      grid-auto-rows: 50px;
+      margin: 15px 15px;
+      background: #000000;
+    }
+
+
+    .headerContainer {
+      position: fixed;
+      background-color: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      bottom: 20px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 60px;
+      z-index: 100; 
+    }
+
+    .fixedHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+      width: 340px;
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      border: 1px solid rgb(22, 22, 22);
+    }
+
+    .introLogo {
+      width: 70px;
+      margin-bottom: 20px;
+    }
+
+
+    .headerLogo {
+      width: 42px;
+      transition: transform 0.5s ease;
+      order: 1;
+      margin-left: 12px;
+      animation: rotateLogo 15s linear infinite;
+    }
+
+    @keyframes rotateLogo {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .headerName {
+      font-size: 15px;
+      font-family: 'inter';
+      font-weight: 500;
+      color: white;
+      order: 2;
+      margin-right: 12px;
+    }
+
+
+    .fixedFooter {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+      border-radius: 20px;
+    }
+
+
+    .cardTop {
+        position: relative;
+        font-family: 'inter';
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 30px;
+        transition: all 400ms;
+        box-sizing: border-box;
+        margin-bottom: 80px;
+      }
+
+    .cardMeta {
+      font-family: 'inter';
+      font-size: 30px;
+      font-weight: 200;
+      color: white;
+      width: 650px;
+    }
+
+
+    .cardTitle {
+      font-size: 85px;
+      font-family: 'inter';
+      font-weight: 600;
+      color: white;
+      margin-bottom: 15px;
+    }
+
+
+    .cardFooter {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      color: white;
+    }
+
+    .footerName {
+      font-family: 'inter';
+      font-size: 14px;
+      font-weight: 600;
+      color: white;
+    }
+
+    .linkContainerTop { 
+      margin-top: 20px;
+      display: flex;
+      width: 300px;  
+      justify-content: center;
+      text-align: center;
+      align-items: center;     
+    }
+
+    .link {
+      color: white;
+      font-weight: 500;
+      font-family: 'inter';
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .link i {
+      transition: transform 0.3s ease;
+    }
+  
+    .link:hover i {
+      transform: translateX(5px);
+    }
+  
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+}
+
+@media only screen and (min-width: 511px) and (max-width: 1024px) {
+  .cardFooter {
+    grid-row: span 1 / auto;
+    grid-column: span 2 / auto;
+  }
+
+  .cardTop {
+    grid-row: span 5 / auto;
+    grid-column: span 2 / auto;
+  }
+
+  a {
+    text-decoration: none;
+    font-family: 'inter';
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+  }
+
+  .cardContainer {
+    display: grid;
+    row-gap: 20px;
+    grid-auto-rows: 50px;
+    margin: 15px 15px;
+    background: #000000;
+  }
+
+  .headerContainer {
+    position: fixed;
+    background-color: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    z-index: 100;
+  }
+
+  .fixedHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 250px;
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    border: 1px solid rgb(20, 20, 20);
+  }
+
+  .introLogo {
+    width: 50px;
+    margin-bottom: 15px;
+  }
+
+  .headerLogo {
+    width: 31px;
+    transition: transform 0.5s ease;
+    order: 1;
+    margin-left: 12px;
+    animation: rotateLogo 15s linear infinite;
+  }
+
+  @keyframes rotateLogo {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .headerName {
+    font-size: 12px;
+    font-family: 'inter';
+    font-weight: 400;
+    color: white;
+    order: 2;
+    margin-right: 12px;
+  }
+
+  .fixedFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    border-radius: 20px;
+  }
+
+  .cardTop {
+    position: relative;
+    font-family: 'inter';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 30px;
+    transition: all 400ms;
+    box-sizing: border-box;
+  }
+
+  .cardMeta {
+    font-family: 'inter';
+    font-size: 25px;
+    font-weight: 200;
+    color: white;
+    width: 500px;
+    margin-bottom: 10px;
+  }
+
+
+  .cardFooter {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    color: white;
+  }
+
+
+  .footerName {
+    font-family: 'inter';
+    font-size: 10px;
+    font-weight: 400;
+    color: white;
+  }
+
+  
+  .linkContainerTop { 
+    width: 255px; 
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;  
+  }
+
+  .link {
+    color: white;
+    font-weight: 600;
+    font-family: 'inter';
+    font-size: 12px;
+  }
+
+  .link i {
+  transition: transform 0.3s ease;
+}
+
+.link:hover i {
+  transform: translateX(5px);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+  }
+    
+
+  @media only screen and (max-width: 510px) {
+    .cardFooter {
+      grid-row: span 1 / auto;
+      grid-column: span 2 / auto;
+    }
+
+    .cardTop {
+      grid-row: span 5 / auto;
+      grid-column: span 2 / auto;
+    }
+
+    a {
+      text-decoration: none;
+      font-family: 'inter';
+      font-size: 16px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .cardContainer {
+      display: grid;
+      row-gap: 20px;
+      grid-auto-rows: 50px;
+      margin: 15px 15px;
+      background: #000000;
+    }
+
+    .headerContainer {
+      position: fixed;
+      background-color: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      bottom: 0px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 50px;
+      z-index: 100;
+    }
+
+    .fixedHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+      width: 250px;
+      backdrop-filter: blur(20px);
+      border-radius: 15px;
+      border: 1px solid rgb(20, 20, 20);
+    }
+
+    .introLogo {
+      width: 50px;
+      margin-bottom: 15px;
+    }
+
+    .headerLogo {
+      width: 28px;
+      transition: transform 0.5s ease;
+      order: 1;
+      margin-left: 12px;
+      animation: rotateLogo 15s linear infinite;
+    }
+
+    @keyframes rotateLogo {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .headerName {
+      font-size: 12px;
+      font-family: 'inter';
+      font-weight: 400;
+      color: white;
+      order: 2;
+      margin-right: 12px;
+    }
+
+    .fixedFooter {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+      border-radius: 20px;
+    }
+
+    .cardTop {
+      position: relative;
+      font-family: 'inter';
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-radius: 30px;
+      transition: all 400ms;
+      box-sizing: border-box;
+    }
+
+    .cardMeta {
+      font-family: 'inter';
+      font-size: 15px;
+      font-weight: 200;
+      color: white;
+      width: 300px;
+      margin-bottom: 10px;
+    }
+
+    .cardTitle {
+      font-size: 28px;
+      font-family: 'inter';
+      font-weight: 600;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .cardFooter {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      color: white;
+    }
+
+
+    .footerName {
+      font-family: 'inter';
+      font-size: 10px;
+      font-weight: 400;
+      color: white;
+    }
+
+    
+    .linkContainerTop { 
+      width: 245px; 
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;  
+    }
+
+    .link {
+      color: white;
+      font-weight: 600;
+      font-family: 'inter';
+      font-size: 10px;
+    }
+
+    .link i {
+    transition: transform 0.3s ease;
+  }
+
+  .link:hover i {
+    transform: translateX(5px);
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+  </style>
+</head>
+
+  <body class="cardContainer">
+
+    <footer class="cardFooter">
+      <div class="footerName">2025 <span style="font-size: 14px;">&copy;</span> zirbelCODE</div>
+    </footer>
+
+    <div class="cardTop">
+      <img src="logo.png" alt="Neuronum Logo - A Cyber Neuron" class="introLogo">
+      <div class="cardMeta">zirbelCODE: Augsburger Coding Space</div>
+      <div class="linkContainerTop">
+        <a href="https://x.com/zirbelcode" target="_blank" class="link">
+          Website Project am 14.02.25 ab 18 Uhr &nbsp;&nbsp; <i class="fas fa-long-arrow-alt-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="headerContainer">
+      <div class="fixedHeader">
+        <a href="/"><img src="logo.png" alt="Neuronum Logo - A Cyber Neuron" class="headerLogo" ></a>
+        <div class="headerName">team@zirbelcode.de</div>
+      </div>
+    </div>
+
+  </body>
+</html>
+
